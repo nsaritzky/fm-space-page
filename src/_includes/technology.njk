@@ -1,0 +1,52 @@
+{% set indices = [0, 1, 2] %}
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+      <link
+        rel="icon"
+        type="image/png"
+        sizes="32x32"
+        href="./assets/favicon-32x32.png"
+      />
+    <link rel="stylesheet" , href="/css/styles.css" />
+    <title>Frontend Mentor | Space tourism website</title>
+  </head>
+  <body class="bg-black">
+    <div
+      class="h-max min-h-screen w-screen bg-technology-mobile bg-cover md:bg-technology-tablet lg:bg-technology-desktop pt-[89px] md:pt-[136px] items-center text-center lg:text-left lg:items-start lg:pt-[212px]"
+    >
+      {% include 'header.njk' %}
+<div class="flex flex-col lg:flex-row lg:ml-[166.5px] lg:justify-start">
+        <div class="flex flex-col items-center lg:items-start">
+          <div class="md:ml-[38px] lg:ml-0 md:self-start font-barlow-condensed text-[28px] tracking-[4.725px]">
+            <span class="font-bold text-white/30 mr-[28px]">03</span><span class="text-white uppercase">Space launch 101</span>
+          </div>
+          <picture class="w-full lg:mt-[75px] lg:w-1/3 lg:absolute right-0">
+            <source media="(min-width: 1024px)" srcset="{{data.technology[index].images.portrait}}">
+            <source srcset="{{data.technology[index].images.landscape}}">
+            <img class="w-full" src="{{data.technology[index].images.portrait}}" alt="{{data.technology[index].name}}">
+          </picture>
+          <div class="flex flex-col items-center lg:flex-row mt-[137px]">
+            <div class="flex flex-row lg:flex-col gap-[32px]">
+              {% for i in indices %}
+                <a href="/technology/{% if i == 0 %}vehicle{% elif i == 1 %}spaceport{% else %}capsule{% endif %}"
+                   class="w-[80px] flex items-center justify-center h-[80px] rounded-full font-bellefair text-[32px] text-center {% if i == index %}text-[#0B0D17] bg-white{% else %}text-white border border-white/[0.25] hover:border-white{% endif %}">{{ i + 1 }}</a>
+              {% endfor %}
+            </div>
+            <div class="lg:ml-[80px]">
+              <div class="font-barlow-condensed text-space-pale-blue uppercase text-[14px] md:text-[16px] tracking-[2.7px] mb-[11px]">The terminology...</div>
+              <div class="font-bellefair text-[24px] md:text-[40px] lg:text-[56px] text-white uppercase">{{data.technology[index].name}}</div>
+              <div class="font-barlow text-space-pale-blue text-[15px] md:text-[16px] lg:text-[18px] leading-[25px] md:leading-[28px] lg:leading-[32px] w-11/12 md:w-2/3 mx-auto lg:w-[444px]">{{data.technology[index].description}}</div>
+            </div>
+          </div>
+        </div>
+
+
+</div>
+
+  </body>
+</html>

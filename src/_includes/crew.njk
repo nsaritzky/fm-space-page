@@ -1,0 +1,46 @@
+{% set indices = [0, 1, 2, 3] %}
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+      <link
+        rel="icon"
+        type="image/png"
+        sizes="32x32"
+        href="./assets/favicon-32x32.png"
+      />
+    <link rel="stylesheet" , href="/css/styles.css" />
+    <title>Frontend Mentor | Space tourism website</title>
+  </head>
+  <body class="bg-black">
+    <div
+      class="h-max min-h-screen w-screen bg-crew-mobile bg-cover md:bg-crew-tablet lg:bg-crew-desktop pt-[89px] md:pt-[136px] items-center text-center lg:text-left lg:items-start lg:pt-[212px]"
+    >
+      {% include 'header.njk' %}
+<div class="flex flex-col lg:flex-row lg:ml-[166.5px] lg:justify-start">
+        <div class="flex flex-col items-center lg:items-start">
+          <div class="font-barlow-condensed text-[28px] tracking-[4.725px]">
+            <span class="font-bold text-white/30 mr-[28px]">02</span><span class="text-white uppercase">Meet your crew</span>
+          </div>
+          <div class="font-bellefair text-white/50 text-[16px] md:text-[24px] lg:text-[32px] uppercase md:mt-[60px] lg:mt-[152px] mb-[8px] lg:mb-[15px]">{{data.crew[index].role}}</div>
+          <div class="font-bellefair text-white text-[24px] md:text-[40px] lg:text-[56px] uppercase mb-[27px]">{{data.crew[index].name}}</div>
+          <div class="font-barlow text-space-pale-blue text-[15px] md:text-[16px] lg:text-[18px] leading-[32px] mb-[50px] lg:mb-[88px] w-2/3 lg:w-[444px]">{{data.crew[index].bio}}</div>
+          <ul class="flex gap-[24px]">
+          {% for i in indices %}
+            <a class="w-[15px] h-[15px] rounded-full {% if i == index %}bg-white {% else %} bg-white/[0.17] hover:bg-white/50 {% endif %}" href="/crew/{% if i == 0 %}hurley{% elif i == 1 %}shuttleworth{% elif i == 2 %}glover{% else %}ansari{% endif %}">
+            </a>
+          {% endfor %}
+          </ul>
+        </div>
+
+<picture class="lg:absolute bottom-0 mt-[50px] mx-auto lg:right-[50px] {% if index==3 %}mt-20{% endif %}">
+  <source srcset="{{ data.crew[index].images.webp }}">
+  <img class="src="{{ data.crew[index].images.png }}">
+</picture>
+</div>
+
+  </body>
+</html>

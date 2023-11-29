@@ -1,0 +1,53 @@
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+      <link
+        rel="icon"
+        type="image/png"
+        sizes="32x32"
+        href="./assets/favicon-32x32.png"
+      />
+    <link rel="stylesheet" , href="css/styles.css" />
+    <title>Frontend Mentor | Space tourism website</title>
+  </head>
+  <body class="bg-black">
+    <div
+      class="h-screen w-screen bg-home-mobile bg-cover md:bg-home-tablet lg:bg-home-desktop"
+    >
+      {% include 'header.njk' %}
+      <div class="justify-between w-full mt-[202px] items-center text-center lg:text-left absolute lg:bottom-[131px]  flex flex-col lg:flex-row">
+        <div class="lg:ml-[165px] w-[444px]">
+          <div
+            class="font-barlow-condensed text-[28px] mb-[24px] tracking-[4.725px] text-space-pale-blue"
+          >
+            So, you want to travel to
+          </div>
+          <div class="font-bellefair text-h1 uppercase text-white mb-[24px]">Space</div>
+          <div class="text-space-pale-blue">
+            Let’s face it; if you want to go to space, you might as well
+            genuinely go to outer space and not hover kind of on the edge of it.
+            Well sit back, and relax because we’ll give you a truly out of this
+            world experience! Explore
+          </div>
+      </div>
+      <div>
+      <div class="relative h-[246px] w-[246px] md:w-[397.4px] md:h-[397.4px] lg:h-[450px] lg:w-[450px]">
+        <div class="absolute w-full h-full rounded-full hover:bg-white/10">
+        <div
+          class="absolute top-[48px] left-[48px] h-[150px] w-[150px]
+                 md:top-[77.7px] md:left-[77.7px] md:h-[242px] md:w-[242px]
+                 lg:top-[87.5px] lg:left-[87.5px] flex lg:h-[274px] lg:w-[274px]
+                 items-center justify-center rounded-full bg-white font-bellefair
+                 text[20px] md:text-[32px] uppercase tracking-[2px]"
+        >
+          explore
+        </div>
+        </div>
+      </div>
+      </div>
+    </div>
+
+  </body>
+</html>

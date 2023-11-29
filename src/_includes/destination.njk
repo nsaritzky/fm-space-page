@@ -1,0 +1,59 @@
+{% set indices = [0, 1, 2, 3] %}
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+      <link
+        rel="icon"
+        type="image/png"
+        sizes="32x32"
+        href="./assets/favicon-32x32.png"
+      />
+    <link rel="stylesheet" , href="/css/styles.css" />
+    <title>Frontend Mentor | Space tourism website</title>
+  </head>
+  <body class="bg-black">
+    <div
+      class="h-max min-h-screen w-screen bg-destination-mobile bg-cover md:bg-destination-tablet lg:bg-destination-desktop pt-[89px] md:pt-[136px] items-center text-center lg:text-left lg:items-start lg:pt-[212px]"
+    >
+      {% include 'header.njk' %}
+      
+      <div class="flex flex-col lg:flex-row lg:ml-[166.5px] items-center lg:justify-around">
+        <div>
+          <div class="font-barlow-condensed text-[28px] tracking-[4.725px]">
+            <span class="font-bold text-white/30 mr-[28px]">01</span><span class="text-white uppercase">Pick your destination</span>
+          </div>
+          <div class="mx-auto lg:mt-[100px]">
+            <picture class="w-[170px] md:w-[300px] mt-[45px] mb-[45px] lg:ml-[53px] lg:w-full h-auto inline-block">
+              <source class="scale-[0.38] md:scale-[0.67] lg:scale-100" srcset="{{ data.destinations[index].images.webp }}" type="image/webp">
+              <img class="" src="{{ data.destinations[index].images.png }}">
+          </picture>
+          </div>
+        </div>
+        <div class="w-3/4 lg:w-[445px] lg:mt-[80px] flex flex-col items-center lg:items-start">
+            <ul class="flex gap-[35px] mx-auto lg:ml-0 font-barlow-condensed tracking-[2.362px] text-[14px] md:tracking-[2.7px] md:text-[16px]">
+              {% for i in indices %}
+                <a href="/destination/{{data.destinations[i].name}}">
+                <li class=" uppercase pb-[15px] {% if i == index %}text-white border-b-2 border-white {% else %} text-space-pale-blue hover:border-b-2 border-white/50 {% endif %}">{{ data.destinations[i].name }}</li>
+              {% endfor %}
+            </ul>
+            <div class="uppercase text-white font-bellefair text-[56px] md:text-h2">{{ data.destinations[index].name }}</div>
+            <div class="font-barlow text-space-pale-blue text-[15px] leading-[25px] md:text-[18px] md:leading-[32px] pb-[54px] border-b border-[#383B4B]">{{ data.destinations[index].description }}</div>
+            <div class="mt-[28px] flex items-center md:justify-center lg:justify-start flex-col md:flex-row">
+              <div class="md:mr-[79px]">
+            <div class="uppercase font-barlow-condensed text-space-pale-blue tracking-[2.362px] mb-[12px]">avg. distance</div>
+            <div class="text-white font-bellefair text-[28px] uppercase">{{ data.destinations[index].distance }}</div>
+              </div>
+              <div>
+                <div class="uppercase font-barlow-condensed text-space-pale-blue tracking-[2.632px] mb-[12px]">Est. travel time</div>
+                <div class="text-white font-bellefair text-[28px] uppercase">{{ data.destinations[index].travel }}</div>
+              </div>
+            </div>
+        </div>
+      </div>
+    
+  </body>
+</html>
