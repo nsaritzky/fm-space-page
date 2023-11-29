@@ -22,6 +22,10 @@ module.exports = function (eleventyConfig) {
 
   eleventyConfig.addPlugin(EleventyHtmlBasePlugin);
 
+  eleventyConfig.addFilter("toLowerCase", function (value) {
+    return value.toLowerCase();
+  });
+
   eleventyConfig.addFilter("slideMenuClass", function (item) {
     // Remove the leading slash if it exists
     const normalizedPath = this.page.url.startsWith("/")

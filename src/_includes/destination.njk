@@ -36,7 +36,7 @@
         <div class="w-3/4 lg:w-[445px] lg:mt-[80px] flex flex-col items-center lg:items-start">
             <ul class="flex gap-[35px] mx-auto lg:ml-0 font-barlow-condensed tracking-[2.362px] text-[14px] md:tracking-[2.7px] md:text-[16px]">
               {% for i in indices %}
-                <a href="/destination/{{data.destinations[i].name}}">
+                <a href="/destination/{{data.destinations[i].name | toLowerCase}}">
                 <li class=" uppercase pb-[15px] {% if i == index %}text-white border-b-2 border-white {% else %} text-space-pale-blue hover:border-b-2 border-white/50 {% endif %}">{{ data.destinations[i].name }}</li>
               {% endfor %}
             </ul>
