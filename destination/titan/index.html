@@ -3,66 +3,49 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-      <link
-        rel="icon"
-        type="image/png"
-        sizes="32x32"
-        href="./assets/favicon-32x32.png"
-      />
-    <link rel="stylesheet" , href="/css/styles.css" />
+      <link rel="icon" type="image/png" sizes="32x32" href="assets/favicon-32x32.png">
+    <link rel="stylesheet" ,="" href="/fm-space-page/css/styles.css">
     <title>Frontend Mentor | Space tourism website</title>
   </head>
   <body class="bg-black">
-    <div
-      class="h-max min-h-screen w-screen bg-destination-mobile bg-cover md:bg-destination-tablet lg:bg-destination-desktop pt-[89px] md:pt-[136px] items-center text-center lg:text-left lg:items-start lg:pt-[212px]"
-    >
+    <div class="h-max min-h-screen w-screen bg-destination-mobile bg-cover md:bg-destination-tablet lg:bg-destination-desktop pt-[89px] md:pt-[136px] items-center text-center lg:text-left lg:items-start lg:pt-[212px]">
       <div>
-      <img
-        class="absolute top-[24px] left-[24px] md:left-[39px] lg:left-[55px] lg:top-16 h-[48px]"
-        src="/assets/shared/logo.svg"
-      />
+      <img class="absolute top-[24px] left-[24px] md:left-[39px] lg:left-[55px] lg:top-16 h-[48px]" src="/fm-space-page/assets/shared/logo.svg">
       <button class="md:hidden absolute top-[33px] right-[24px]" id="menuButton">
-      <img src="/assets/shared/icon-hamburger.svg">
+      <img src="/fm-space-page/assets/shared/icon-hamburger.svg">
       </button>
       <div id="sideMenu" class=" font-barlow-condensed text-[16px] tracking-[2.7px] text-white transform translate-x-full transition-transform duration-300 ease-in-out bg-white/5 backdrop-blur-2xl w-[254px] h-screen pl-[32px] fixed inset-y-0 right-0 z-50">
         <button id="closeButton">
-        <img class="absolute top-[34px] right-[26.5px]"  src="/assets/shared/icon-close.svg">
+        <img class="absolute top-[34px] right-[26.5px]" src="/fm-space-page/assets/shared/icon-close.svg">
         </button>
         <ul class="flex flex-col mt-[118px] items-start">
-            <a class="mb-[32px] w-full hover:border-r-2 hover:border-white/50 text-left" href="/"><li><span class="font-bold mr-[11px]">00</span>Home</li></a>
-            <a class="mb-[32px] w-full border-r-2 border-white text-left" href="/destination/moon"><li ><span class="font-bold mr-[14px]">01</span>Destination</li></a>
-            <a class="mb-[32px] w-full hover:border-r-2 hover:border-white/50 text-left" href="/crew/hurley"><li ><span class="font-bold mr-[12px]">02</span>Crew</li></a>
-            <a class="mb-[32px] w-full hover:border-r-2 hover:border-white/50 text-left" href="/technology/vehicle"><li ><span class="font-bold mr-[12px]">03</span>Technology</li></a>
+            <a class="mb-[32px] w-full hover:border-r-2 hover:border-white/50 text-left" href="/fm-space-page/"><li><span class="font-bold mr-[11px]">00</span>Home</li></a>
+            <a class="mb-[32px] w-full border-r-2 border-white text-left" href="/fm-space-page/destination/moon"><li><span class="font-bold mr-[14px]">01</span>Destination</li></a>
+            <a class="mb-[32px] w-full hover:border-r-2 hover:border-white/50 text-left" href="/fm-space-page/crew/hurley"><li><span class="font-bold mr-[12px]">02</span>Crew</li></a>
+            <a class="mb-[32px] w-full hover:border-r-2 hover:border-white/50 text-left" href="/fm-space-page/technology/vehicle"><li><span class="font-bold mr-[12px]">03</span>Technology</li></a>
             </ul>
       </div>
-      <nav
-        class="absolute hidden md:block right-0 pl-12 md:top-0 lg:top-[40px] h-[96px] w-max pr-12 bg-white/5 backdrop-blur-2xl"
-      >
-        <ul
-          class="flex h-full items-center justify-end space-x-8 font-barlow-condensed tracking-[2.7px] text-white"
-        >
-            <a class="box-border flex h-full items-center text-white hover:mb-[-2px] hover:border-b-2 hover:border-white/50" href="/">
-          <li
-            class=""
-          >
+      <nav class="absolute hidden md:block right-0 pl-12 md:top-0 lg:top-[40px] h-[96px] w-max pr-12 bg-white/5 backdrop-blur-2xl">
+        <ul class="flex h-full items-center justify-end space-x-8 font-barlow-condensed tracking-[2.7px] text-white">
+            <a class="box-border flex h-full items-center text-white hover:mb-[-2px] hover:border-b-2 hover:border-white/50" href="/fm-space-page/">
+          <li class="">
             <span class="mr-1 font-bold">00</span> Home
           </li>
             </a>
-            <a class="box-border flex h-full items-center text-white mb-[-2px] border-b-2 border-white" href="/destination/moon">
-          <li
-           >
+            <a class="box-border flex h-full items-center text-white mb-[-2px] border-b-2 border-white" href="/fm-space-page/destination/moon">
+          <li>
             <span class="mr-1 font-bold">01</span> Destination
           </li>
             </a>
-            <a class="box-border flex h-full items-center text-white hover:mb-[-2px] hover:border-b-2 hover:border-white/50" href="/crew/hurley">
+            <a class="box-border flex h-full items-center text-white hover:mb-[-2px] hover:border-b-2 hover:border-white/50" href="/fm-space-page/crew/hurley">
           <li>
             <span class="mr-1 font-bold">02</span> Crew
           </li>
             </a>
-            <a class="box-border flex h-full items-center text-white hover:mb-[-2px] hover:border-b-2 hover:border-white/50" href="/technology/vehicle">
+            <a class="box-border flex h-full items-center text-white hover:mb-[-2px] hover:border-b-2 hover:border-white/50" href="/fm-space-page/technology/vehicle">
           <li>
               <span class="mr-1 font-bold">03</span> Technology
           </li>
@@ -88,27 +71,27 @@
           </div>
           <div class="mx-auto lg:mt-[100px]">
             <picture class="w-[170px] md:w-[300px] mt-[45px] mb-[45px] lg:ml-[53px] lg:w-full h-auto inline-block">
-              <source class="scale-[0.38] md:scale-[0.67] lg:scale-100" srcset="/assets/destination/image-titan.webp" type="image/webp">
-              <img class="" src="/assets/destination/image-titan.png">
+              <source class="scale-[0.38] md:scale-[0.67] lg:scale-100" srcset="/fm-space-page/assets/destination/image-titan.webp" type="image/webp">
+              <img class="" src="/fm-space-page/assets/destination/image-titan.png">
           </picture>
           </div>
         </div>
         <div class="w-3/4 lg:w-[445px] lg:mt-[80px] flex flex-col items-center lg:items-start">
             <ul class="flex gap-[35px] mx-auto lg:ml-0 font-barlow-condensed tracking-[2.362px] text-[14px] md:tracking-[2.7px] md:text-[16px]">
               
-                <a href="/destination/Moon">
+                <a href="/fm-space-page/destination/Moon">
                 <li class=" uppercase pb-[15px]  text-space-pale-blue hover:border-b-2 border-white/50 ">Moon</li>
               
-                <a href="/destination/Mars">
+                <a href="/fm-space-page/destination/Mars">
                 <li class=" uppercase pb-[15px]  text-space-pale-blue hover:border-b-2 border-white/50 ">Mars</li>
               
-                <a href="/destination/Europa">
+                <a href="/fm-space-page/destination/Europa">
                 <li class=" uppercase pb-[15px]  text-space-pale-blue hover:border-b-2 border-white/50 ">Europa</li>
               
-                <a href="/destination/Titan">
+                <a href="/fm-space-page/destination/Titan">
                 <li class=" uppercase pb-[15px] text-white border-b-2 border-white ">Titan</li>
               
-            </ul>
+            </a></a></a></a></ul>
             <div class="uppercase text-white font-bellefair text-[56px] md:text-h2">Titan</div>
             <div class="font-barlow text-space-pale-blue text-[15px] leading-[25px] md:text-[18px] md:leading-[32px] pb-[54px] border-b border-[#383B4B]">The only moon known to have a dense atmosphere other than Earth, Titan is a home away from home (just a few hundred degrees colder!). As a bonus, you get striking views of the Rings of Saturn.</div>
             <div class="mt-[28px] flex items-center md:justify-center lg:justify-start flex-col md:flex-row">
@@ -124,5 +107,5 @@
         </div>
       </div>
     
-  </body>
+  </div></body>
 </html>
