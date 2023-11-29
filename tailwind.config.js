@@ -1,4 +1,6 @@
 /** @type {import('tailwindcss').Config} */
+
+const pathPrefix = "/fm-space-page";
 module.exports = {
   content: [
     "./src/**/*.html",
@@ -18,27 +20,21 @@ module.exports = {
         "barlow-condensed": ["Barlow Condensed"],
       },
       backgroundImage: {
-        "home-desktop": "url('/assets/home/background-home-desktop.jpg')",
-        "home-tablet": "url('/assets/home/background-home-tablet.jpg')",
-        "home-mobile": "url('/assets/home/background-home-mobile.jpg')",
+        "home-desktop": `url('${pathPrefix}/assets/home/background-home-desktop.jpg')`,
+        "home-tablet": `url('${pathPrefix}/assets/home/background-home-tablet.jpg')`,
+        "home-mobile": `url('${pathPrefix}/assets/home/background-home-mobile.jpg')`,
 
-        "destination-desktop":
-          "url('/assets/destination/background-destination-desktop.jpg')",
-        "destination-tablet":
-          "url('/assets/destination/background-destination-tablet.jpg')",
-        "destination-mobile":
-          "url('/assets/destination/background-destination-mobile.jpg')",
+        "destination-desktop": `url('${pathPrefix}/assets/destination/background-destination-desktop.jpg')`,
+        "destination-tablet": `url('${pathPrefix}/assets/destination/background-destination-tablet.jpg')`,
+        "destination-mobile": `url('${pathPrefix}/assets/destination/background-destination-mobile.jpg')`,
 
-        "crew-desktop": "url('/assets/crew/background-crew-desktop.jpg')",
-        "crew-tablet": "url('/assets/crew/background-crew-tablet.jpg')",
-        "crew-mobile": "url('/assets/crew/background-crew-mobile.jpg')",
+        "crew-desktop": `url('${pathPrefix}/assets/crew/background-crew-desktop.jpg')`,
+        "crew-tablet": `url('${pathPrefix}/assets/crew/background-crew-tablet.jpg')`,
+        "crew-mobile": `url('${pathPrefix}/assets/crew/background-crew-mobile.jpg')`,
 
-        "technology-desktop":
-          "url('/assets/technology/background-technology-desktop.jpg')",
-        "technology-tablet":
-          "url('/assets/technology/background-technology-tablet.jpg')",
-        "technology-mobile":
-          "url('/assets/technology/background-technology-mobile.jpg')",
+        "technology-desktop": `url('${pathPrefix}/assets/technology/background-technology-desktop.jpg')`,
+        "technology-tablet": `url('${pathPrefix}/assets/technology/background-technology-tablet.jpg')`,
+        "technology-mobile": `url('${pathPrefix}/assets/technology/background-technology-mobile.jpg')`,
       },
 
       fontSize: {
