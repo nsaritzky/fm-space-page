@@ -18,6 +18,8 @@ module.exports = function (eleventyConfig) {
     }
   });
 
+  eleventyConfig.addPlugin(EleventyHtmlBasePlugin);
+
   eleventyConfig.addFilter("slideMenuClass", function (item) {
     // Remove the leading slash if it exists
     const normalizedPath = this.page.url.startsWith("/")
@@ -40,5 +42,6 @@ module.exports = function (eleventyConfig) {
       output: "_site",
       includes: "_includes",
     },
+    pathPrefix: "/fm-space-page/",
   };
 };
